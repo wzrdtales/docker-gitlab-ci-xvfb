@@ -9,7 +9,6 @@ RUN apt-get update && \
       apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
             
 RUN mkdir /tmp/.X11-unix && chmod 1777 /tmp/.X11-unix
-ADD runner_bash /home/cirunner/.runner_bash
 ADD xvfb.sh /bin/start_xvfb
 RUN chmod +x /bin/start_xvfb
 
